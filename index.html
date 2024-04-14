@@ -4,7 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meta™</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #4e54c8, #8f94fb, #c4c8ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    background-color: #4e54c8;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%);
+  }
+
+  .button:hover::before {
+    width: 0;
+    height: 0;
+  }
+
+  .button a {
+    text-decoration: none;
+    color: white;
+  }
+</style>
 </head>
 <body>
 <div class="container">
